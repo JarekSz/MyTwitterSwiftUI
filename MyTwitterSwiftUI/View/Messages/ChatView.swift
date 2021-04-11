@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ChatView: View {
     @State var messageText: String = ""
+    
     var body: some View {
         VStack {
             ScrollView {
@@ -33,7 +34,7 @@ struct ChatView: View {
                                 
                                 Text(message.messageText)
                                     .padding()
-                                    .background(Color.gray)
+                                    .background(Color(.systemGray4))
                                     .clipShape(ChatBubble(isFromCurrentUser: false))
                                     .foregroundColor(.black)
                                     .padding(.trailing)
