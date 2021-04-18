@@ -8,52 +8,35 @@
 import SwiftUI
 
 struct ChatView: View {
-    @State var messageText: String = ""
+//    let user: User
+//    @ObservedObject var viewModel: ChatViewModel
+//    @State var messageText: String = ""
+    
+//    init(user: User) {
+//        self.user = user
+//        self.viewModel = ChatViewModel(user: user)
+//    }
     
     var body: some View {
         VStack {
             ScrollView {
-                VStack(alignment: .leading, spacing: 12, content: {
-                    ForEach(MOCK_MESSAGES) { message in
-                        HStack {
-                            if message.currentUser {
-                                Spacer()
-                                Text(message.messageText)
-                                    .padding()
-                                    .background(Color.blue)
-                                    .clipShape(ChatBubble(isFromCurrentUser: true))
-                                    .foregroundColor(.white)
-                                    .padding(.horizontal)
-                            } else {
-                                Image(message.imageName)
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 40, height: 40)
-                                    .clipShape(Circle())
-                                    .padding(.leading)
-                                
-                                Text(message.messageText)
-                                    .padding()
-                                    .background(Color(.systemGray4))
-                                    .clipShape(ChatBubble(isFromCurrentUser: false))
-                                    .foregroundColor(.black)
-                                    .padding(.trailing)
-                                
-                                Spacer()
-                           }
-                        }
-                    }
-                })
+                VStack(alignment: .leading, spacing: 12) {
+                    Text("chat view")
+                }
             }
+            .padding(.top)
             
-            MessageInputView(messageText: $messageText)
-                .padding()
+//            MessageInputView(messageText: $messageText, action: sendMessage)
+//                .padding()
+            
         }
+        .navigationTitle("Chat View")
     }
+    
+//    func sendMessage() {
+//        viewModel.sendMessage(messageText)
+//        messageText = ""
+//    }
 }
 
-struct ChatView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChatView()
-    }
-}
+

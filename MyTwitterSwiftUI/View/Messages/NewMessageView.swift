@@ -11,27 +11,27 @@ struct NewMessageView: View {
     @State var searchText = ""
     @Binding var show: Bool
     @Binding var startChat: Bool
+//    @Binding var user: User?
+//    @ObservedObject var viewModel = SearchViewModel(config: .newMessage)
     
     var body: some View {
         ScrollView {
             SearchBar(text: $searchText)
                 .padding()
+
+//            let user = User(dictionary: [""])
             
             VStack(alignment: .leading) {
-                ForEach(0..<10) { _ in
-                    HStack { Spacer() }
-                    Button(action: {}, label: {
-                        UserCell()
-                    })
-                }
-            }
-            .padding(.leading)
+                Button(action: {}, label: {
+                    UserCell()
+                })
+            }.padding(.leading)
         }
     }
 }
 
 struct NewMessageView_Previews: PreviewProvider {
     static var previews: some View {
-        NewMessageView(show: .constant(true), startChat: .constant(true))
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }

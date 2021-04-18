@@ -10,43 +10,50 @@ import SwiftUI
 struct ConversationsView: View {
     @State var isShowingNewMessageView = false
     @State var showChat = false
+//    @State var user: User?
+//    @ObservedObject var viewModel = ConversationsViewModel()
     
     var body: some View {
-        ZStack(alignment: .bottomTrailing, content: {
-            NavigationLink(destination: ChatView(),
-                           isActive: $showChat,
-                           label: {} )
-
+        ZStack(alignment: .bottomTrailing) {
+            
+//            if let user = user {
+//                NavigationLink(destination: ChatView()),
+//                               isActive: $showChat,
+//                               label: {} )
+//            }
+            
             ScrollView {
                 VStack {
-                    ForEach(0..<10) { _ in
-                        NavigationLink(
-                            destination: ChatView(),
-                            label: {
-                                ConversationCell()
-                            })
-                        
+                    ForEach(0..<5) { message in
+//                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        ConversationCell()
                     }
                     .padding()
+//                    }
                 }
             }
             
-            Button(action: { self.isShowingNewMessageView.toggle() },
-                   label: {
+            HStack {
+                Spacer()
+                
+                Button(action: { self.isShowingNewMessageView.toggle() }, label: {
                     Image(systemName: "envelope")
                         .resizable()
-                        .scaledToFill()
-                        .frame(width: 32, height: 32)
+                        .scaledToFit()
+                        .frame(width: 28, height: 28)
                         .padding()
-                   })
-            .background(Color(.systemBlue))
-            .foregroundColor(.white)
-            .clipShape(Circle())
-            .padding()
-                .sheet(isPresented: $isShowingNewMessageView, content: {
-                    SearchView()
                 })
-        })
+                .background(Color(.systemBlue))
+                .foregroundColor(.white)
+                .clipShape(Circle())
+                .padding()
+                .sheet(isPresented: $isShowingNewMessageView, content: {
+                    NewMessageView(show: $isShowingNewMessageView, startChat: $showChat)
+                })
+            }
+            .navigationTitle("Messages")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 

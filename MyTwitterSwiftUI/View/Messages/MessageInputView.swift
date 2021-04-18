@@ -9,23 +9,28 @@ import SwiftUI
 
 struct MessageInputView: View {
     @Binding var messageText: String
+    
+    var action: () -> Void
+    
     var body: some View {
-        HStack {
-            TextField("message", text: $messageText)
-                .textFieldStyle(PlainTextFieldStyle())
-                .frame(minHeight: 30)
-                .padding(.leading)
+        VStack {
+            Rectangle()
+                .foregroundColor(Color(.separator))
+                .frame(width: UIScreen.main.bounds.width, height: 0.75)
+                .padding(.bottom, 8)
             
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                Text("Send")
-                    .padding(.trailing)
-            })
+            HStack {
+                TextField("Message...", text: $messageText)
+                    .textFieldStyle(PlainTextFieldStyle())
+                    .frame(minHeight: 30)
+                
+                Button(action: action) {
+                    Text("Send")
+                        .bold()
+                        .foregroundColor(.blue)
+                }
+            }
+            .padding(.horizontal)
         }
-    }
-}
-
-struct MessageInputView_Previews: PreviewProvider {
-    static var previews: some View {
-        MessageInputView(messageText: .constant("Message..."))
     }
 }
