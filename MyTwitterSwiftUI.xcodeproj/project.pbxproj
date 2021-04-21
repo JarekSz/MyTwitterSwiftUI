@@ -11,7 +11,6 @@
 		DE2948B12622671F003954CC /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2948B02622671F003954CC /* ChatView.swift */; };
 		DE2948B426226AD9003954CC /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2948B326226AD9003954CC /* ChatBubble.swift */; };
 		DE6C6261261FB89900C99B54 /* MyTwitterSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6C6260261FB89900C99B54 /* MyTwitterSwiftUIApp.swift */; };
-		DE6C6265261FB8A700C99B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6C6264261FB8A700C99B54 /* Assets.xcassets */; };
 		DE6C6268261FB8A700C99B54 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6C6267261FB8A700C99B54 /* Preview Assets.xcassets */; };
 		DE6CA5C42622484600A6F53F /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6CA5C32622484600A6F53F /* FeedView.swift */; };
 		DE6CA5C72622484A00A6F53F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6CA5C62622484A00A6F53F /* SearchBar.swift */; };
@@ -48,6 +47,7 @@
 		DEA9E6EA262B7C280070D261 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9E6E9262B7C280070D261 /* ProfileViewModel.swift */; };
 		DEA9E6ED262B87250070D261 /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9E6EC262B87250070D261 /* UploadTweetViewModel.swift */; };
 		DEA9E6F0262B8EF20070D261 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9E6EF262B8EF20070D261 /* Constants.swift */; };
+		DEB7E5942630D67E00965C0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB7E5932630D67E00965C0A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +56,6 @@
 		DE2948B326226AD9003954CC /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		DE6C625D261FB89900C99B54 /* MyTwitterSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTwitterSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE6C6260261FB89900C99B54 /* MyTwitterSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTwitterSwiftUIApp.swift; sourceTree = "<group>"; };
-		DE6C6264261FB8A700C99B54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE6C6267261FB8A700C99B54 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DE6C6269261FB8A700C99B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE6CA5C32622484600A6F53F /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
@@ -89,6 +88,7 @@
 		DEA9E6E9262B7C280070D261 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		DEA9E6EC262B87250070D261 /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
 		DEA9E6EF262B8EF20070D261 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DEB7E5932630D67E00965C0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../Downloads/CourseResources-2/Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,7 @@
 				DE6CA5D32622487B00A6F53F /* View */,
 				DEA9E6E1262B7BA40070D261 /* ViewModels */,
 				DE6C6260261FB89900C99B54 /* MyTwitterSwiftUIApp.swift */,
-				DE6C6264261FB8A700C99B54 /* Assets.xcassets */,
+				DEB7E5932630D67E00965C0A /* Assets.xcassets */,
 				DE6C6269261FB8A700C99B54 /* Info.plist */,
 				DE6CA5E926233D2C00A6F53F /* GoogleService-Info.plist */,
 				DE6C6266261FB8A700C99B54 /* Preview Content */,
@@ -340,7 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE6C6268261FB8A700C99B54 /* Preview Assets.xcassets in Resources */,
-				DE6C6265261FB8A700C99B54 /* Assets.xcassets in Resources */,
+				DEB7E5942630D67E00965C0A /* Assets.xcassets in Resources */,
 				DE6CA5EA26233D2C00A6F53F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

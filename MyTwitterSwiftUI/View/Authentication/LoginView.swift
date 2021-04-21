@@ -78,6 +78,7 @@ struct LoginView: View {
                         })
                 }
             }
+            .navigationBarTitle("Log in", displayMode: .inline)
             .background(Color(#colorLiteral(red: 0.1825715601, green: 0.6299551129, blue: 0.9542170167, alpha: 1)))
             .ignoresSafeArea()
         }

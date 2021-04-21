@@ -19,11 +19,18 @@ struct NewMessageView: View {
             SearchBar(text: $searchText)
                 .padding()
 
-//            let user = User(dictionary: [""])
-            
+            let user = User(dictionary: [
+                                "id": "123",
+                                "username": "batman",
+                                "profileImageUrl": "batman",
+                                "fullname": "The Batman",
+                                "email": "aa@aaa.net",
+                                "stats": UserStats(followers: 1, following: 2),
+                                "bio": "My biography"])
+
             VStack(alignment: .leading) {
                 Button(action: {}, label: {
-                    UserCell(user: user!)
+                    UserCell(user: user)
                 })
             }.padding(.leading)
         }
