@@ -9,9 +9,9 @@ import SwiftUI
 
 struct NewMessageView: View {
     @State var searchText = ""
-    @Binding var show: Bool
-    @Binding var startChat: Bool
-//    @Binding var user: User?
+//    @Binding var show: Bool
+//    @Binding var startChat: Bool
+    var user: User?
 //    @ObservedObject var viewModel = SearchViewModel(config: .newMessage)
     
     var body: some View {
@@ -23,7 +23,7 @@ struct NewMessageView: View {
             
             VStack(alignment: .leading) {
                 Button(action: {}, label: {
-                    UserCell()
+                    UserCell(user: user!)
                 })
             }.padding(.leading)
         }
@@ -32,6 +32,14 @@ struct NewMessageView: View {
 
 struct NewMessageView_Previews: PreviewProvider {
     static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+        let user = User(dictionary: [
+                            "id": "123",
+                            "username": "batman",
+                            "profileImageUrl": "batman",
+                            "fullname": "The Batman",
+                            "email": "aa@aaa.net",
+                            "stats": UserStats(followers: 1, following: 2),
+                            "bio": "My biography"])
+        NewMessageView(user: user)
     }
 }

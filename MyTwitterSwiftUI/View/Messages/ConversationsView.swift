@@ -10,7 +10,7 @@ import SwiftUI
 struct ConversationsView: View {
     @State var isShowingNewMessageView = false
     @State var showChat = false
-//    @State var user: User?
+    var user: User?
 //    @ObservedObject var viewModel = ConversationsViewModel()
     
     var body: some View {
@@ -48,7 +48,7 @@ struct ConversationsView: View {
                 .clipShape(Circle())
                 .padding()
                 .sheet(isPresented: $isShowingNewMessageView, content: {
-                    NewMessageView(show: $isShowingNewMessageView, startChat: $showChat)
+                    NewMessageView(searchText: "Searching", user: user)
                 })
             }
             .navigationTitle("Messages")
@@ -59,6 +59,14 @@ struct ConversationsView: View {
 
 struct ConversationsView_Previews: PreviewProvider {
     static var previews: some View {
-        ConversationsView()
+        let user = User(dictionary: [
+                            "id": "123",
+                            "username": "batman",
+                            "profileImageUrl": "batman",
+                            "fullname": "The Batman",
+                            "email": "aa@aaa.net",
+                            "stats": UserStats(followers: 1, following: 2),
+                            "bio": "My biography"])
+        ConversationsView(isShowingNewMessageView: true, showChat: true, user: user)
     }
 }
