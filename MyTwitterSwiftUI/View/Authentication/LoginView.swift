@@ -10,7 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State var email = ""
     @State var password = ""
-//    @EnvironmentObject var viewModel: AuthViewModel
+    var viewModel = AuthViewModel()
     
     var body: some View {
         NavigationView {
@@ -51,7 +51,9 @@ struct LoginView: View {
                         })
                     }
                     
-                    Button(action: {}, label: {
+                    Button(action: {
+                        viewModel.login(withEmail: email, password: password)
+                    }, label: {
                         Text("Sign In")
                             .font(.headline)
                             .foregroundColor(.blue)
@@ -78,7 +80,6 @@ struct LoginView: View {
                         })
                 }
             }
-            .navigationBarTitle("Log in", displayMode: .inline)
             .background(Color(#colorLiteral(red: 0.1825715601, green: 0.6299551129, blue: 0.9542170167, alpha: 1)))
             .ignoresSafeArea()
         }

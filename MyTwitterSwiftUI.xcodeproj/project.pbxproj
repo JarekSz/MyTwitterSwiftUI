@@ -48,6 +48,7 @@
 		DEA9E6ED262B87250070D261 /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9E6EC262B87250070D261 /* UploadTweetViewModel.swift */; };
 		DEA9E6F0262B8EF20070D261 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9E6EF262B8EF20070D261 /* Constants.swift */; };
 		DEB7E5942630D67E00965C0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB7E5932630D67E00965C0A /* Assets.xcassets */; };
+		DEB7E5982630E3E600965C0A /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB7E5972630E3E600965C0A /* LazyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		DEA9E6EC262B87250070D261 /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
 		DEA9E6EF262B8EF20070D261 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DEB7E5932630D67E00965C0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../Downloads/CourseResources-2/Assets.xcassets"; sourceTree = "<group>"; };
+		DEB7E5972630E3E600965C0A /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				DEA9E6CA262B2FA00070D261 /* CustomTextField.swift */,
 				DEA9E6DB262B78D90070D261 /* CustomSecureField.swift */,
 				DEA9E6D8262B788D0070D261 /* ImagePicker.swift */,
+				DEB7E5972630E3E600965C0A /* LazyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				DEA9E6B42623BB0B0070D261 /* FilterButtonView.swift in Sources */,
 				DE6CA5E226224A7E00A6F53F /* ConversationCell.swift in Sources */,
 				DEA9E6ED262B87250070D261 /* UploadTweetViewModel.swift in Sources */,
+				DEB7E5982630E3E600965C0A /* LazyView.swift in Sources */,
 				DE2948B426226AD9003954CC /* ChatBubble.swift in Sources */,
 				DEA9E6D9262B788D0070D261 /* ImagePicker.swift in Sources */,
 				DE6CA5CD2622485000A6F53F /* TweetCell.swift in Sources */,

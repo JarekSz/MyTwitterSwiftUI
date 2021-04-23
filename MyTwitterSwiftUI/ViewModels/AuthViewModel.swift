@@ -8,18 +8,18 @@
 import SwiftUI
 import Firebase
 
-class AuthViewModel {
-    @Published var userSession: FirebaseAuth.User?
-    @Published var isAuthenticating = false
-    @Published var error: Error?
-    @Published var user: User?
+class AuthViewModel: ObservableObject {
+//    @Published var userSession: FirebaseAuth.User?
+//    @Published var isAuthenticating = false
+//    @Published var error: Error?
+//    @Published var user: User?
 
 //    static let shared = AuthViewModel()
     
-    init() {
-        userSession = Auth.auth().currentUser
+//    init() {
+//        userSession = Auth.auth().currentUser
 //        fetchUser()
-    }
+//    }
     
     func login(withEmail email: String, password: String) {
 //        Auth.auth().signIn(withEmail: email, password: password) {
@@ -28,5 +28,18 @@ class AuthViewModel {
 //                return
 //            }
 //        }
+    }
+    
+    func registerUser(email: String, password: String, username: String, fullname:String, profileImage: UIImage) {
+        
+        print("Email = \(email)")
+        print("Password = \(password)")
+        
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            print("Error: \(error?.localizedDescription)")
+            return
+        }
+        
+        print("Successfully signed in")
     }
 }

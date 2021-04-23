@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ConversationsView: View {
     @State var isShowingNewMessageView = false
@@ -67,6 +68,12 @@ struct ConversationsView_Previews: PreviewProvider {
                             "email": "aa@aaa.net",
                             "stats": UserStats(followers: 1, following: 2),
                             "bio": "My biography"])
+        
+//        let COLLECTION_USERS = Firestore.firestore().collection("users")
+//        let doc = COLLECTION_USERS.document()
+//
+//        print("\(doc)")
+
         ConversationsView(isShowingNewMessageView: true, showChat: true, user: user)
     }
 }
