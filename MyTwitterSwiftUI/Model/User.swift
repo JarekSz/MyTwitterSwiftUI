@@ -27,6 +27,8 @@ struct User: Identifiable {
         self.fullname = dictionary["fullname"] as? String ?? ""
         self.stats = UserStats(followers: 0, following: 0)
         self.bio = dictionary["bio"] as? String ?? ""
+        
+        print("DEBUG: user initialized as \(self)")
     }
 }
 

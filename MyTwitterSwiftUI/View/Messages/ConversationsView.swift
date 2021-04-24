@@ -11,7 +11,7 @@ import Firebase
 struct ConversationsView: View {
     @State var isShowingNewMessageView = false
     @State var showChat = false
-    var user: User?
+    @State var user: User?
 //    @ObservedObject var viewModel = ConversationsViewModel()
     
     var body: some View {
@@ -49,7 +49,7 @@ struct ConversationsView: View {
                 .clipShape(Circle())
                 .padding()
                 .sheet(isPresented: $isShowingNewMessageView, content: {
-                    NewMessageView(searchText: "Searching", user: user)
+                    NewMessageView(show: $isShowingNewMessageView, startChat: $showChat, isEditing: $isShowingNewMessageView)
                 })
             }
             .navigationTitle("Messages")
@@ -60,20 +60,6 @@ struct ConversationsView: View {
 
 struct ConversationsView_Previews: PreviewProvider {
     static var previews: some View {
-        let user = User(dictionary: [
-                            "id": "123",
-                            "username": "batman",
-                            "profileImageUrl": "batman",
-                            "fullname": "The Batman",
-                            "email": "aa@aaa.net",
-                            "stats": UserStats(followers: 1, following: 2),
-                            "bio": "My biography"])
-        
-//        let COLLECTION_USERS = Firestore.firestore().collection("users")
-//        let doc = COLLECTION_USERS.document()
-//
-//        print("\(doc)")
-
-        ConversationsView(isShowingNewMessageView: true, showChat: true, user: user)
+        ConversationsView()
     }
 }

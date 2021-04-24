@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchView: View {
     @State var searchText = ""
-//    @ObservedObject var viewModel = SearchViewModel(config: .search)
+    @ObservedObject var viewModel = SearchViewModel()
 
     var body: some View {
         ScrollView {
@@ -17,14 +17,14 @@ struct SearchView: View {
                 .padding()
 
             VStack(alignment: .leading) {
-                ForEach(0..<5) { _ in
+                ForEach(viewModel.users) { user in
                     HStack { Spacer() }
                     
-//                    NavigationLink(
-//                        destination: LazyView(UserProfileView(user: user)),
-//                        label: {
-//                            UserCell(user: user)
-//                        })
+                    NavigationLink(
+                        destination: UserProfileView(user: user),
+                        label: {
+                            UserCell(user: user)
+                        })
                 }
             }
             .padding(.leading)
