@@ -54,19 +54,19 @@ struct RegistrationView: View {
                 })
                 
                 VStack(spacing: 20) {
-                    CustomTextField(text: $email, placeholder: "Email", imageName: "envelope")
+                    CustomTextField(text: $email, placeholder: Text("Email"), imageName: "envelope")
                         .padding()
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
                         .foregroundColor(.white)
                     
-                    CustomTextField(text: $fullname, placeholder: "Full Name", imageName: "person")
+                    CustomTextField(text: $fullname, placeholder: Text("Full Name"), imageName: "person")
                         .padding()
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
                         .foregroundColor(.white)
                     
-                    CustomTextField(text: $username, placeholder: "Username", imageName: "person")
+                    CustomTextField(text: $username, placeholder: Text("Username"), imageName: "person")
                         .padding()
                         .background(Color(.init(white: 1, alpha: 0.15)))
                         .cornerRadius(10)
@@ -81,7 +81,9 @@ struct RegistrationView: View {
                 .padding(.horizontal, 32)
                 
                 Button(action: {
-                    viewModel.registerUser(email: email, password: password, username: username, fullname: fullname, profileImage: selectedUIImage!)
+                    if let image = selectedUIImage {
+                        viewModel.registerUser(email: email, password: password, username: username, fullname: fullname, profileImage: image)
+                    }
                 }, label: {
                     Text("Sign Up")
                         .font(.headline)
