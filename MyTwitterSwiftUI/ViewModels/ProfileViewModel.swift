@@ -8,24 +8,36 @@
 import SwiftUI
 import Firebase
 
-class ProfileViewModel {
+class ProfileViewModel: ObservableObject {
     let user: User
-//    @Published var isFollowed = false
+    @Published var isFollowed = false
     
     init(user: User) {
         self.user = user
     }
     
     func follow() {
-//        guard let currentUid = Auth.auth().currentUser?.uid else { return }
-//
-//        COLLECTION_FOLLOWING.document(currentUid).collection("user-following").document(user.id)
-//            .setData([:]) { _ in
-//                self.isFollowed = true
-//            }
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        let followingRef = COLLECTION_FOLLOWING.document(currentUid).collection("user-following")
+        let followersRef = COLLECTION_FOLLOWERS.document(user.id).collection("user-followers")
+        
+        followingRef.document(user.id).setData([:]) { _ in
+            followersRef.document(currentUid).setData([:]) { _ in
+                self.isFollowed = true
+            }
+        }
     }
     
     func unfollow() {
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
         
+        let followingRef = COLLECTION_FOLLOWING.document(currentUid).collection("user-following")
+        let followersRef = COLLECTION_FOLLOWERS.document(user.id).collection("user-followers")
+
+        followingRef.document(user.id).delete { _ in
+            followersRef.document(currentUid).delete { _ in
+                self.isFollowed = false
+            }
+        }
     }
 }
