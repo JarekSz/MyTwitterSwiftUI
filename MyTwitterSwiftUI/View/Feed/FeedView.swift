@@ -16,8 +16,7 @@ struct FeedView: View {
             ScrollView {
                 LazyVStack {
                     ForEach(viewModel.tweets) { tweet in
-                        NavigationLink(
-                            destination: TweetDetailView()) {
+                        NavigationLink(destination: TweetDetailView()) {
                             TweetCell(tweet: tweet)
                         }
                     }
