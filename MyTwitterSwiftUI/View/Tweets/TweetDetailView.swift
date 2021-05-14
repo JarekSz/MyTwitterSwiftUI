@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct TweetDetailView: View {
+    let tweet: Tweet
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             HStack {
-                Image("batman")
+                KFImage(URL(string: tweet.profileImageUrl))
                     .resizable()
                     .scaledToFill()
                     .clipped()
@@ -19,20 +22,19 @@ struct TweetDetailView: View {
                     .cornerRadius(28)
                 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Bruce Wayne")
+                    Text(tweet.fullname)
                         .font(.system(size: 14, weight: .semibold))
                     
-                    Text("@batman")
+                    Text("@\(tweet.username)")
                         .font(.system(size: 14))
                         .foregroundColor(.gray)
-
                 }
             }
             
-            Text("It's not who I am underneath, but what I do that defines me")
+            Text(tweet.caption)
                 .font(.system(size: 22))
             
-            Text("7:22 PM • 05/01/2020")
+            Text(tweet.detailedTimestampString)
                 .font(.system(size: 14))
                 .foregroundColor(.gray)
             
@@ -49,7 +51,7 @@ struct TweetDetailView: View {
                 }
                 
                 HStack(spacing: 4) {
-                    Text("0")
+                    Text("\(tweet.likes)")
                         .font(.system(size: 14, weight: .semibold))
                     
                     Text("Likes")
@@ -60,16 +62,10 @@ struct TweetDetailView: View {
             
             Divider()
             
-            TweetActionsView()
+            TweetActionsView(tweet: tweet)
             
             Spacer()
         }
         .padding()
-    }
-}
-
-struct TweetDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        TweetDetailView()
     }
 }

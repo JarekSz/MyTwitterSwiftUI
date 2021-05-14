@@ -31,7 +31,7 @@ struct TweetCell: View {
                         Text("@\(tweet.username) •")
                             .foregroundColor(.gray)
                         
-                        Text("Or that")
+                        Text(tweet.timestampString)
                             .foregroundColor(.gray)
                     }
                     
@@ -42,7 +42,7 @@ struct TweetCell: View {
             .padding(.bottom)
             .padding(.trailing)
             
-            TweetActionsView()
+            TweetActionsView(tweet: tweet)
             
             Divider()
         }

@@ -31,6 +31,8 @@
 		DE6CA5F8262341A600A6F53F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DE6CA5F7262341A600A6F53F /* Kingfisher */; };
 		DE6CA5FB26236CB700A6F53F /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6CA5FA26236CB700A6F53F /* MessageView.swift */; };
 		DE6CA5FE2623707400A6F53F /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6CA5FD2623707400A6F53F /* NewMessageView.swift */; };
+		DE728370264D75B0009B7CDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE72836F264D75B0009B7CDB /* Assets.xcassets */; };
+		DE728374264D8266009B7CDB /* TweetActionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE728373264D8266009B7CDB /* TweetActionViewModel.swift */; };
 		DEA9E69E26227C980070D261 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9E69D26227C980070D261 /* Message.swift */; };
 		DEA9E6AA2623B9150070D261 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9E6A92623B9150070D261 /* UserProfileView.swift */; };
 		DEA9E6AE2623BA720070D261 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9E6AD2623BA720070D261 /* ProfileHeaderView.swift */; };
@@ -50,7 +52,6 @@
 		DEA9E6EA262B7C280070D261 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9E6E9262B7C280070D261 /* ProfileViewModel.swift */; };
 		DEA9E6ED262B87250070D261 /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9E6EC262B87250070D261 /* UploadTweetViewModel.swift */; };
 		DEA9E6F0262B8EF20070D261 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9E6EF262B8EF20070D261 /* Constants.swift */; };
-		DEB7E5942630D67E00965C0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEB7E5932630D67E00965C0A /* Assets.xcassets */; };
 		DEB7E5982630E3E600965C0A /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB7E5972630E3E600965C0A /* LazyView.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,8 @@
 		DE6CA5E926233D2C00A6F53F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE6CA5FA26236CB700A6F53F /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		DE6CA5FD2623707400A6F53F /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
+		DE72836F264D75B0009B7CDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/Assets.xcassets; sourceTree = "<group>"; };
+		DE728373264D8266009B7CDB /* TweetActionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetActionViewModel.swift; sourceTree = "<group>"; };
 		DEA9E69D26227C980070D261 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		DEA9E6A92623B9150070D261 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		DEA9E6AD2623BA720070D261 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
@@ -95,7 +98,6 @@
 		DEA9E6E9262B7C280070D261 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		DEA9E6EC262B87250070D261 /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
 		DEA9E6EF262B8EF20070D261 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		DEB7E5932630D67E00965C0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../Downloads/CourseResources-2/Assets.xcassets"; sourceTree = "<group>"; };
 		DEB7E5972630E3E600965C0A /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,7 +141,7 @@
 				DE6CA5D32622487B00A6F53F /* View */,
 				DEA9E6E1262B7BA40070D261 /* ViewModels */,
 				DE6C6260261FB89900C99B54 /* MyTwitterSwiftUIApp.swift */,
-				DEB7E5932630D67E00965C0A /* Assets.xcassets */,
+				DE72836F264D75B0009B7CDB /* Assets.xcassets */,
 				DE6C6269261FB8A700C99B54 /* Info.plist */,
 				DE6CA5E926233D2C00A6F53F /* GoogleService-Info.plist */,
 				DE6C6266261FB8A700C99B54 /* Preview Content */,
@@ -279,6 +281,7 @@
 				DEA9E6E9262B7C280070D261 /* ProfileViewModel.swift */,
 				DEA9E6EC262B87250070D261 /* UploadTweetViewModel.swift */,
 				DE0E0CE8264A8AE4009AEE98 /* FeedViewModel.swift */,
+				DE728373264D8266009B7CDB /* TweetActionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -352,7 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE6C6268261FB8A700C99B54 /* Preview Assets.xcassets in Resources */,
-				DEB7E5942630D67E00965C0A /* Assets.xcassets in Resources */,
+				DE728370264D75B0009B7CDB /* Assets.xcassets in Resources */,
 				DE6CA5EA26233D2C00A6F53F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,6 +389,7 @@
 				DEB7E5982630E3E600965C0A /* LazyView.swift in Sources */,
 				DE2948B426226AD9003954CC /* ChatBubble.swift in Sources */,
 				DEA9E6D9262B788D0070D261 /* ImagePicker.swift in Sources */,
+				DE728374264D8266009B7CDB /* TweetActionViewModel.swift in Sources */,
 				DE6CA5CD2622485000A6F53F /* TweetCell.swift in Sources */,
 				DE6CA5FE2623707400A6F53F /* NewMessageView.swift in Sources */,
 				DEA9E69E26227C980070D261 /* Message.swift in Sources */,

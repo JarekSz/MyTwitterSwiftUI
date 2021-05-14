@@ -31,17 +31,3 @@ struct UserProfileView: View {
         }
     }
 }
-
-struct UserProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        let user = User(dictionary: [
-                            "id": "123",
-                            "username": "batman",
-                            "profileImageUrl": "batman",
-                            "fullname": "The Batman",
-                            "email": "aa@aaa.net",
-                            "stats": UserStats(followers: 1, following: 2),
-                            "bio": "My biography"])
-        UserProfileView(user: user)
-    }
-}
