@@ -10,6 +10,7 @@
 		DE0E0CE9264A8AE5009AEE98 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E0CE8264A8AE4009AEE98 /* FeedViewModel.swift */; };
 		DE0E0CEE264C0BCE009AEE98 /* TweetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E0CED264C0BCE009AEE98 /* TweetDetailView.swift */; };
 		DE0E0CFF264D5B03009AEE98 /* TweetActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E0CFE264D5B03009AEE98 /* TweetActionsView.swift */; };
+		DE0E0D0B264FF846009AEE98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE0E0D0A264FF846009AEE98 /* Assets.xcassets */; };
 		DE2948AE26226542003954CC /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2948AD26226542003954CC /* MessageInputView.swift */; };
 		DE2948B12622671F003954CC /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2948B02622671F003954CC /* ChatView.swift */; };
 		DE2948B426226AD9003954CC /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2948B326226AD9003954CC /* ChatBubble.swift */; };
@@ -31,7 +32,6 @@
 		DE6CA5F8262341A600A6F53F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DE6CA5F7262341A600A6F53F /* Kingfisher */; };
 		DE6CA5FB26236CB700A6F53F /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6CA5FA26236CB700A6F53F /* MessageView.swift */; };
 		DE6CA5FE2623707400A6F53F /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6CA5FD2623707400A6F53F /* NewMessageView.swift */; };
-		DE728370264D75B0009B7CDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE72836F264D75B0009B7CDB /* Assets.xcassets */; };
 		DE728374264D8266009B7CDB /* TweetActionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE728373264D8266009B7CDB /* TweetActionViewModel.swift */; };
 		DEA9E69E26227C980070D261 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9E69D26227C980070D261 /* Message.swift */; };
 		DEA9E6AA2623B9150070D261 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9E6A92623B9150070D261 /* UserProfileView.swift */; };
@@ -59,6 +59,7 @@
 		DE0E0CE8264A8AE4009AEE98 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		DE0E0CED264C0BCE009AEE98 /* TweetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetDetailView.swift; sourceTree = "<group>"; };
 		DE0E0CFE264D5B03009AEE98 /* TweetActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetActionsView.swift; sourceTree = "<group>"; };
+		DE0E0D0A264FF846009AEE98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../Downloads/CourseResources-2/Assets.xcassets"; sourceTree = "<group>"; };
 		DE2948AD26226542003954CC /* MessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
 		DE2948B02622671F003954CC /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		DE2948B326226AD9003954CC /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
@@ -77,7 +78,6 @@
 		DE6CA5E926233D2C00A6F53F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE6CA5FA26236CB700A6F53F /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		DE6CA5FD2623707400A6F53F /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
-		DE72836F264D75B0009B7CDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../Downloads/Assets.xcassets; sourceTree = "<group>"; };
 		DE728373264D8266009B7CDB /* TweetActionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetActionViewModel.swift; sourceTree = "<group>"; };
 		DEA9E69D26227C980070D261 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		DEA9E6A92623B9150070D261 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 				DE6CA5D32622487B00A6F53F /* View */,
 				DEA9E6E1262B7BA40070D261 /* ViewModels */,
 				DE6C6260261FB89900C99B54 /* MyTwitterSwiftUIApp.swift */,
-				DE72836F264D75B0009B7CDB /* Assets.xcassets */,
+				DE0E0D0A264FF846009AEE98 /* Assets.xcassets */,
 				DE6C6269261FB8A700C99B54 /* Info.plist */,
 				DE6CA5E926233D2C00A6F53F /* GoogleService-Info.plist */,
 				DE6C6266261FB8A700C99B54 /* Preview Content */,
@@ -355,7 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE6C6268261FB8A700C99B54 /* Preview Assets.xcassets in Resources */,
-				DE728370264D75B0009B7CDB /* Assets.xcassets in Resources */,
+				DE0E0D0B264FF846009AEE98 /* Assets.xcassets in Resources */,
 				DE6CA5EA26233D2C00A6F53F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
