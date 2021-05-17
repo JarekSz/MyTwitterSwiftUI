@@ -14,6 +14,7 @@ struct TweetDetailView: View {
     
     init(tweet: Tweet, actionView: TweetActionsView) {
         self.tweet = tweet
+        // actionView passed to details view
         self.actionView = actionView
     }
     

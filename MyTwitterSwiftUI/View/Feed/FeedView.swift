@@ -17,6 +17,7 @@ struct FeedView: View {
                 LazyVStack {
                     ForEach(viewModel.tweets) { tweet in
                         let tweetCell = TweetCell(tweet: tweet)
+                        // actionView from niewly created cell will be passed to details
                         let actionView = tweetCell.actionView
                         NavigationLink(destination: TweetDetailView(tweet: tweet, actionView: actionView)) {
                             tweetCell

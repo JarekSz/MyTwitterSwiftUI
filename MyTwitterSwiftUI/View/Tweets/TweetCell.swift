@@ -14,6 +14,7 @@ struct TweetCell: View {
     
     init(tweet: Tweet) {
         self.tweet = tweet
+        // actionView initialized only once
         self.actionView = TweetActionsView(tweet: tweet)
     }
     
