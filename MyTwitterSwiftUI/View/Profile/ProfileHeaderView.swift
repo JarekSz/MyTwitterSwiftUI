@@ -13,8 +13,7 @@ struct ProfileHeaderView: View {
 //    @Binding var editProfilePresented: Bool
     @State var selectedFilter: TweetFilterOptions = .tweets
     @Binding var isFollowed: Bool
-    let viewModel: ProfileViewModel
-//    let user: User
+    @ObservedObject var viewModel: ProfileViewModel
     
     var body: some View {
         VStack {
@@ -33,10 +32,14 @@ struct ProfileHeaderView: View {
             Text("@\(viewModel.user.username)")
                 .font(.subheadline)
                 .foregroundColor(.gray)
+            
+            Text("Billionaire by day, dark knight by night")
+                .font(.system(size: 14))
+                .padding(.top, 8)
                         
             HStack(spacing: 40) {
                 VStack {
-                    Text("11")
+                    Text("\(viewModel.user.stats.followers)")
                         .font(.system(size: 16)).bold()
                     
                     Text("Followers")
@@ -45,7 +48,7 @@ struct ProfileHeaderView: View {
                 }
                 
                 VStack {
-                    Text("11")
+                    Text("\(viewModel.user.stats.following)")
                         .font(.system(size: 16)).bold()
                     
                     Text("Following")
@@ -61,11 +64,5 @@ struct ProfileHeaderView: View {
             
             Spacer()
         }
-    }
-}
-
-struct ProfileHeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }

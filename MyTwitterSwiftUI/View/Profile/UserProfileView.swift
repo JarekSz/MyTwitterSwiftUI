@@ -10,6 +10,7 @@ import SwiftUI
 struct UserProfileView: View {
     let user: User
     @ObservedObject var viewModel: ProfileViewModel
+    @State var selectedFilter: TweetFilterOptions = .tweets
     
     init(user: User) {
         self.user = user
@@ -18,7 +19,7 @@ struct UserProfileView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
+            LazyVStack {
                 ProfileHeaderView(isFollowed: $viewModel.isFollowed, viewModel: viewModel)
                     .padding()
                                 
@@ -27,7 +28,10 @@ struct UserProfileView: View {
                         .padding()
                 }
             }
-            .navigationTitle("batman")
+            .animation(.spring())
+            .transition(.move(edge: .leading))
+            
+            .navigationTitle(user.username)
         }
     }
 }
